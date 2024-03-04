@@ -5,8 +5,8 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
+.art {
+  height: 12em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
