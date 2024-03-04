@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 8088;
+const port = 3300;
 const path = require('path');
 
 app.use(express.static('build'));

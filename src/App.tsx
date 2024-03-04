@@ -17,7 +17,6 @@ function App() {
         <a href="spore.earth" target="_blank">
           <img src={sporeLogo} className="art" alt="Spore art" />
         </a>
-
       </div>
       <h1>Spore is back.</h1>
       <div className="card">
