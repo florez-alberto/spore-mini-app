@@ -24,7 +24,7 @@ function App() {
   const platform = window.Telegram.WebApp.platform;
   window.Telegram.WebApp.expand()
   window.Telegram.WebApp.MainButton.hide()
-  // window.Telegram.WebApp.SettingsButton.hide()
+  window.Telegram.WebApp.SettingsButton.hide()
   return (
     <>
       <MyParticles />
