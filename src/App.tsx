@@ -8,6 +8,11 @@ import './App.css'
 import sporeLogo from "./assets/spore-burn.jpg";
 
 // import WebApp from '@twa-dev/sdk'
+declare global {
+  interface Window {
+    Telegram: any;
+  }
+}
 
 function App() {
   useEffect(() => {
