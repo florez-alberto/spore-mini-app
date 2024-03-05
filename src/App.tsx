@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-// import { useEffect} from 'react'
+import { useEffect} from 'react'
 
 
 import MyParticles from './components/Particles';
@@ -13,8 +13,12 @@ declare global {
     Telegram: any;
   }
 }
+const tele = window.Telegram.WebApp;
 
 function App() {
+  useEffect(() => {
+    tele.ready()
+  }, [])
 
   // const [count, setCount] = useState(0)
   console.log("here"); 

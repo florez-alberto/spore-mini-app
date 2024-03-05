@@ -23,3 +23,4 @@ push-spore-mini.sh
 *.njsproj
 *.sln
 *.sw?
+.env
