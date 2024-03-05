@@ -1,14 +1,31 @@
-import { useState } from 'react'
+// import { useState } from 'react'
+import { useEffect} from 'react'
+
 
 import MyParticles from './components/Particles';
 
 import './App.css'
 import sporeLogo from "./assets/spore-burn.jpg";
 
-import WebApp from '@twa-dev/sdk'
+// import WebApp from '@twa-dev/sdk'
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    function buttonOn() {
+      // do something on btn click
+    }
+
+    let main_page = document.querySelector('#main_page');
+
+    if (main_page) {
+      window.Telegram.WebApp.expand(); //expand window after page loading
+
+      window.Telegram.WebApp.MainButton.onClick(buttonOn); //set func on main button click
+      // window.Telegram.WebApp.MainButton.setParams({'text': 'Корзина'}); // set btn params
+      window.Telegram.WebApp.MainButton.hide(); //show telegram btn
+    }
+  }, []);
+  // const [count, setCount] = useState(0)
 
   return (
     <>
@@ -17,19 +34,20 @@ function App() {
         <a href="spore.earth" target="_blank">
           <img src={sporeLogo} className="art" alt="Spore art" />
         </a>
+
       </div>
-      <h1>Spore is back.</h1>
-      <div className="card">
+      <h2>Burn it all</h2>
+      {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
       </div>
       {/*  */}
-      <div className="card">
+      {/* <div className="card">
         <button onClick={() => WebApp.showAlert(`Hello Spore Fam! Current count is ${count}`)}>
           Show Alert
         </button>
-      </div>
+      </div>  */}
     </>
   )
 }
