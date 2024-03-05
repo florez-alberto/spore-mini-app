@@ -10,6 +10,7 @@ package-lock.json
 node_modules
 dist
 dist-ssr
+push-spore-mini.sh
 *.local
 
 # Editor directories and files

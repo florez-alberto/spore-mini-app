@@ -23,13 +23,13 @@ const MyParticles = () => {
 			background: {
 				color: "transparent"
 			},
-			fpsLimit: 60,
+			fpsLimit: 10,
 			interactivity: {
 				detectsOn: "canvas",
 				events: {
-					onClick: { enable: true, mode: "repulse" },
+					onClick: { enable: false, mode: "repulse" },
 					onHover: {
-						enable: true,
+						enable: false,
 						mode: "bubble",
 
 					},
@@ -37,39 +37,39 @@ const MyParticles = () => {
 				},
 				modes: {
 					bubble: {
-						distance: 400,
-						duration: 0.3,
+						distance: 100,
+						duration: 0.5,
 						opacity: 0.1,
-						size: 4,
+						size: 2,
 
 					},
-					grab: { distance: 400, line_linked: { opacity: 0.5 } },
-					push: { particles_nb: 4 },
-					remove: { particles_nb: 2 },
-					repulse: { distance: 200, duration: 0.4 }
+					grab: { distance: 100, line_linked: { opacity: 0.5 } },
+					push: { particles_nb: 2 },
+					remove: { particles_nb: 1 },
+					repulse: { distance: 100, duration: 0.2 }
 				}
 			},
 			particles: {
 				color: {
-					value: "#FFF",
+					value: "#d86d6f",
 				},
 				links: {
 					blink: false,
 					color: {
-						value: "#fff",
+						value: "#d74b24",
 					},
 					consent: false,
 					distance: 250,
 					enable: false,
 					opacity: 0,
 					shadow: {
-						blur: 5,
+						blur: 1,
 						color: {
 							value: "lime",
 						},
 						enable: false,
 					},
-					width: 2,
+					width: 1,
 				},
 				move: {
 					attract: { enable: true, rotateX: 600, rotateY: 1200 },
@@ -78,7 +78,7 @@ const MyParticles = () => {
 					outMode: "out",
 					random: false,
 					size: true,
-					speed: 1,
+					speed: 0.5,
 					straight: false
 
 				},
@@ -86,7 +86,7 @@ const MyParticles = () => {
 					enable: true,
 				},
 				number: {
-					value: 160,
+					value: 100,
 				},
 				opacity: {
 					animation: {
@@ -105,7 +105,7 @@ const MyParticles = () => {
 				size: {
 					value: {
 						min: 1,
-						max: 10,
+						max: 5,
 					},
 				},
 			},
