@@ -3,9 +3,9 @@ import { useEffect} from 'react'
 
 
 import MyParticles from './components/Particles';
-
 import './App.css'
 import sporeLogo from "./assets/spore-burn.jpg";
+import { platform } from 'os';
 
 // import WebApp from '@twa-dev/sdk'
 declare global {
@@ -15,26 +15,16 @@ declare global {
 }
 
 function App() {
-  useEffect(() => {
-    function buttonOn() {
-      // do something on btn click
-    }
 
-    let main_page = document.querySelector('#main_page');
-
-    if (main_page) {
-      window.Telegram.WebApp.expand(); //expand window after page loading
-
-      window.Telegram.WebApp.MainButton.onClick(buttonOn); //set func on main button click
-      // window.Telegram.WebApp.MainButton.setParams({'text': 'Корзина'}); // set btn params
-      window.Telegram.WebApp.MainButton.hide(); //show telegram btn
-    }
-  }, []);
   // const [count, setCount] = useState(0)
   console.log("here"); 
-  console.log(window.Telegram.WebApp.version);
+  const version = window.Telegram.WebApp.version;
+  const user = window.Telegram.WebApp.initDataUnsafe.user;
+  console.log(user);
+  const platform = window.Telegram.WebApp.platform;
   window.Telegram.WebApp.expand()
   window.Telegram.WebApp.MainButton.hide()
+  // window.Telegram.WebApp.SettingsButton.hide()
   return (
     <>
       <MyParticles />
@@ -56,6 +46,12 @@ function App() {
           Show Alert
         </button>
       </div>  */}
+      <div>
+        
+        Version: {version}
+        <br />
+        Platform: {platform}
+      </div>
     </>
   )
 }
