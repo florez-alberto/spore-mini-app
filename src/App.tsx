@@ -31,7 +31,10 @@ function App() {
     }
   }, []);
   // const [count, setCount] = useState(0)
-
+  console.log("here"); 
+  console.log(window.Telegram.WebApp.version);
+  window.Telegram.WebApp.expand()
+  window.Telegram.WebApp.MainButton.hide()
   return (
     <>
       <MyParticles />
