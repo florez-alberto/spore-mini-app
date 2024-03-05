@@ -1,11 +1,11 @@
 // import { useState } from 'react'
-import { useEffect} from 'react'
+// import { useEffect} from 'react'
 
 
 import MyParticles from './components/Particles';
 import './App.css'
 import sporeLogo from "./assets/spore-burn.jpg";
-import { platform } from 'os';
+// import { platform } from 'os';
 
 // import WebApp from '@twa-dev/sdk'
 declare global {
