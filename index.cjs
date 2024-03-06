@@ -15,5 +15,5 @@ app.get('*', function (req, res) {
 });
 
 
-bot.launch();
+
 
